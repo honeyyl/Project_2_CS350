@@ -1,6 +1,6 @@
 # Project_2_CS350
 
-### Apache Superset 
+### Apache Superset (https://projects.apache.org/project.html?superset)
 
 #### Project Specifications:
 - Installation of the system, preferably on WSL

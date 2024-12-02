@@ -17,6 +17,17 @@ id = "process3"
 name = "Done"
 
   [[processes.tasks]]
+  id = "ifndt9sd0mdh7sekkymd1rxa"
+  title = "Dec. 2, 2024: Started working on documentation"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = "2024-12-02T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
   id = "fpbuh6vs3t7efnls8fn9ufvn"
   title = "Nov. 11, 2024: Meet to plan project procedure"
   description = "<p></p>"

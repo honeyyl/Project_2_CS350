@@ -29,3 +29,11 @@ Superset is scalable, featuring:
 - Asynchronous caching.
 
 ---
+### Key Features
+- Scalability: Includes horizontal/vertical scaling.
+
+- Data Model: Support for particular query languages or data formats (such as SQL, JSON, or bespoke APIs).
+
+- Performance: Low latency, fault tolerance, and read/write speed optimization.
+  
+- Integration: Compatibility with other ASF projects, programming languages, and tools.

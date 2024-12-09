@@ -10,7 +10,6 @@
 - Shortcomings of the (current version of the) system
 - Their plans for the future of the system
 
-## Email:
 
 Your project is
                 Apache  Superset

@@ -41,7 +41,7 @@ Add the database:
 - make the connection
 - it should now show up in the list of database connections
 
-![DB](images/database_connect.png)
+![DB](images/database_connect.PNG)
 
 creating dataset from the CSV File:
 Do this in terminal
@@ -69,7 +69,7 @@ Adding the dataset:
 - select the "sales_data" table
 - click "create dataset and create chart"
 
-![DATASET](images/dataset.png)
+![DATASET](images/dataset.PNG)
 
 Now creating a chart
 - select dataset
@@ -80,7 +80,7 @@ Now creating a chart
 
 You should now have a dataset and a chart. 
 You can make more charts in the same manner.
-![CHART](images/chart.png)
+![CHART](images/chart.PNG)
 
 Now you can make a dashboard:
 - go to the dashboard tab
@@ -90,6 +90,6 @@ Now you can make a dashboard:
 - save it
 
 You now have a dashboard.
-![DASHBOARD](images/dashboard.png)
+![DASHBOARD](images/dashboard.PNG)
 
 

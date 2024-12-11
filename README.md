@@ -107,7 +107,3 @@ Apache Superset's development roadmap includes the following enhancements:
 - **Enhanced Data Caching**: Plans to implement more efficient caching techniques to speed up query performance.
 - **Advanced Data Exploration Features**: Adding new features like predictive analytics and machine learning integration.
 - **Better Customization Options**: Future versions will offer more extensive customization for visualizations, including advanced styling options for charts.
-
-## Documentation
-- **GitHub Repository**: A repository for the project will be set up, with the Apache Superset installation files, scripts for configuration, and project documentation.
-- **Collaboration**: All team members will have access to the repository for contributions, and regular meetings will be held to discuss progress and updates.

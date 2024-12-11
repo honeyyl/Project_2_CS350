@@ -87,7 +87,7 @@ Before installation, ensure the following are installed on your system:
 
 ---
 
-### 5. Install Apache Superset
+### 5. Install Apache Superset 
 - Install Apache Superset using pip:
     ```bash
     pip install apache-superset

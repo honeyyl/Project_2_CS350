@@ -1,52 +1,95 @@
-`python3 -m venv superset-venv`
+Setup instructions: 
 
-`source superset-venv/bin/activate`
+Virtual environment:
+``python3 -m venv superset-venv``
+``source superset-venv/bin/activate``
 
-`pip install apache-superset`
+Installations and setup:
+``pip install apache-superset flask``
+``export FLASK_APP=superset``
+``touch superset_config.py``
+``export SUPERSET_CONFIG_PATH=$(pwd)/superset_config.py``
 
-`export FLASK_APP=superset`
-
-`pip install flask`
-
-`touch superset_config.py`
-
-`export SUPERSET_CONFIG_PATH=$(pwd)/superset_config.py`
-
-verify: `superset export_config`
-
-`touch /home/stmyalik/CS350/Project_2_CS350/usage/superset.db`
-
-`superset db upgrade`
-
-`superset export_config`
-
-`superset run -p 8088 --with-threads --reload --debugger`
-
-or may have to do: `flask run -p 8088` finicky...
-
-http://localhost:8088
-
-will have to alter superset_config.py:
-run: `openssl rand -base64 42`
-copy and paste into secret_key
-run: `export SUPERSET_CONFIG_PATH=$(pwd)/superset_config.py`
+use: ``openssl rand -base64 42`` to generate secret key
+alter superset_config.py with secret key: 
+``SECRET_KEY = "xyz"``
+``touch superset.db``
+``superset db upgrade``
+``superset fab create-admin`` and follow instructions
+Add permissions: `superset fab create-permissions`
 
 
+so superset_config should look like, with your path and secret key.
+```BASH
+SECRET_KEY = "your-secret-key"
+PREVENT_UNSAFE_DB_CONNECTIONS = False
+SQLALCHEMY_DATABASE_URI = "sqlite:////YOUR PATH/superset.db"
+```
 
 
-run: `superset fab create-admin` and follow the prompts
+``superset run -p 8088 --with-threads --reload --debugger``
 
-then bring the server back up
-
-you should then be able to log in and view the dashboard
-
-might run into permissions issues: `superset fab create-permissions`
-
-booting it after everything is set:
-
-- activate the venv: `source superset-venv/bin/activate`
-- ``flask run -p 8088``
+now you can log in at https://localhost:8088
 
 
-if it tells u flask doesn't exist, its the environment variable, just run ``export FLASK_APP=superset`` before anything 
+
+Setting up visualization of data:
+
+Add the database: 
+- settings => database connections => + database
+- select SQLite and provide the SQLAlchemy URI: ``sqlite:////YOUR PATH/superset.db``
+- make the connection
+- it should now show up in the list of database connections
+
+![DB](images/database_connect.png)
+
+creating dataset from the CSV File:
+Do this in terminal
+
+``sqlite3 /YOUR PATH/Project_2_CS350/usage/superset.db``
+ ```BASH
+            CREATE TABLE sales_data (
+                Date TEXT,
+                Region TEXT,
+                Product TEXT,
+                Sales INTEGER,
+                Profit INTEGER
+            );  
+```
+ ``.mode csv``
+ ``.import /YOUR PATH/Project_2_CS350/usage/sales_data.csv sales_data``
+make sure it exists: ``SELECT * FROM sales_data LIMIT 10;``
+``.exit``
+
+Now move back to the Superset UI
+
+Adding the dataset:
+- select + => data => create dataset
+- select the database
+- select the "sales_data" table
+- click "create dataset and create chart"
+
+![DATASET](images/dataset.png)
+
+Now creating a chart
+- select dataset
+- for this select pie chart 
+- for dimensions select: "Region"
+- for metric select: "sales" and aggregate by "SUM"
+- create the chart
+
+You should now have a dataset and a chart. 
+You can make more charts in the same manner.
+![CHART](images/chart.png)
+
+Now you can make a dashboard:
+- go to the dashboard tab
+- click "+ dashboard"
+- Drag and drop the existing chart into the dashboard, or you can make one right there
+- name it
+- save it
+
+You now have a dashboard.
+![DASHBOARD](images/dashboard.png)
+
 

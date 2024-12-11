@@ -179,3 +179,4 @@ To remove Superset completely:
 To stop the server, use `Ctrl+C` in the terminal. Data is persisted locally, so you can restart the server without losing progress:
 ```bash
 superset run -p 8088 --with-threads --reload --debugger
+```

@@ -91,6 +91,14 @@ Apache Superset is an open-source business intelligence web application designed
 - **Performance Issues**: Some users report performance slowdowns when dealing with extremely large datasets or complex queries.
 - **Limited Customization**: While Apache Superset offers many visualization options, customization of chart styles and formats can be somewhat limited in certain cases.
 
+## Usage
+Scalability, fault tolerance, minimal latency, and compatibility with a range of data models and external tools are some of Superset's primary characteristics.
+- SQL databases may be accessed with ease thanks to database connectivity.
+- Dashboards & Data Visualization: Adaptable tools for making interactive dashboards and viewing data.
+- Semantic Layer: Personalized measurements and dimensions for improved analysis.
+- SQL IDE: A powerful SQL editor for preparation and data queries.
+- Flexible Extensions: Supports plugins and APIs and integrates with current infrastructure.
+- Scalable, cloud-native architecture features asynchronous caching and distributed task management.
 ## Future Plans
 
 Apache Superset's development roadmap includes the following enhancements:

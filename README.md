@@ -1,6 +1,6 @@
 # Project 2 - CS350
 
-## [Apache Superset](https://projects.apache.org/project.html?superset) Database Visualization Tool
+## Apache Superset Database Visualization Tool
 
 ### Contributors
 - Stephanie Myalik

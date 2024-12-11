@@ -10,11 +10,11 @@
 --- 
 
 ## Project Overview
-Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in a PostgreSQL environment, using it to visualize data, and exploring its main features and limitations. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the PostgreSQL database.
+Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in a SQLite environment and using it to visualize data. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the SQLite database.
 
 ## Key Requirements
-- **System Installation**: Install Apache Superset on WSL, ensuring compatibility with PostgreSQL.
-- **System Characteristics**: Apache Superset allows users to visualize complex data sets, creating intuitive dashboards and providing rich analytics. It supports SQL querying, real-time data access, and many popular databases.
+- **System Installation**: Install Apache Superset in WSL, and install necessary dependencies.
+- **System Characteristics**: Apache Superset allows users to visualize complex data sets, create dashboards and view analytics. It supports SQL querying, real-time data access, and many popular databases including Postgres and SQLite.
 - **Usage**: Utilize Python for interacting with Apache Superset and visualizing data in VS Code. Example use cases include generating reports, creating charts, and exploring trends.
 - **Shortcomings**: Assess and document any current limitations or bugs in the system, such as integration difficulties with certain databases or performance concerns with large datasets.
 - **Future Plans**: Investigate the plans outlined by Apache Superset developers for future improvements, including new features and enhancements.
@@ -57,13 +57,13 @@ Apache Superset is an open-source business intelligence web application designed
      superset run -p 8088 --with-threads --reload --debugger
      ```
 
-2. **Connecting Apache Superset to PostgreSQL**: (CHANGE TO SQLITE)
+2. **Connecting Apache Superset to SQLite**: (CHANGE TO SQLITE)
 
      ``` bash
      # Access Superset UI by going to localhost:8088
      # Add a new database connection using the following details:
           # Database: SQLite
-          # SQLAlchemy URI: postgresql+psycopg2://sqlite:////PATH//file.db
+          # SQLAlchemy URI: sqlite:////PATH//file.db
      ```
 
 3. **Using Apache Superset with Python**:

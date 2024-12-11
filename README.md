@@ -62,8 +62,8 @@ Apache Superset is an open-source business intelligence web application designed
      ``` bash
      # Access Superset UI by going to localhost:8088
      # Add a new database connection using the following details:
-          # Database: PostgreSQL
-          # SQLAlchemy URI: postgresql+psycopg2://username:password@localhost:5432/database_name
+          # Database: SQLite
+          # SQLAlchemy URI: postgresql+psycopg2://sqlite:////PATH//file.db
      ```
 
 3. **Using Apache Superset with Python**:

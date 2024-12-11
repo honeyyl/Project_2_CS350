@@ -70,6 +70,54 @@ Superset is scalable, featuring:
 3. **Connect SQLite to Superset:**
    ```bash 
     - Connect to the SQLite database (sales_data.db) using the Superset interface.
-    
+
     - Create visualizations, execute queries, and examine the tables.
 
+---
+### Python Script to Create SQLite Database and Insert Data
+
+```bash
+import sqlite3
+
+# Connect to SQLite database (it will create the database if it doesn't exist)
+conn = sqlite3.connect('sales_data.db')
+cursor = conn.cursor()
+
+# Create tables
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS orders (
+    id INTEGER PRIMARY KEY,
+    order_date TEXT,
+    customer_id INTEGER,
+    order_value REAL
+)
+''')
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS customers (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    region TEXT
+)
+''')
+
+# Insert sample data into the tables
+cursor.execute("INSERT INTO orders (id, order_date, customer_id, order_value) VALUES (1, '2024-01-01', 1, 150.00)")
+cursor.execute("INSERT INTO orders (id, order_date, customer_id, order_value) VALUES (2, '2024-01-02', 2, 200.00)")
+cursor.execute("INSERT INTO customers (id, name, region) VALUES (1, 'John Doe', 'North')")
+cursor.execute("INSERT INTO customers (id, name, region) VALUES (2, 'Jane Smith', 'South')")
+
+# Commit the changes and close the connection
+conn.commit()
+
+# Verify the inserted data by querying the tables
+cursor.execute("SELECT * FROM orders")
+print("Orders Table:")
+print(cursor.fetchall())
+
+cursor.execute("SELECT * FROM customers")
+print("Customers Table:")
+print(cursor.fetchall())
+
+# Close the connection
+conn.close()

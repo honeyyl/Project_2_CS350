@@ -1,12 +1,12 @@
-Setup instructions: 
+## Setup instructions: 
 
-Virtual environment:
+### Virtual environment:
 
 - ``python3 -m venv superset-venv``
 
 - ``source superset-venv/bin/activate``
 
-Installations and setup:
+### Installations and setup:
 
 - ``pip install apache-superset flask``
 
@@ -24,7 +24,7 @@ alter superset_config.py with secret key: ``SECRET_KEY = "secret_key"``
 - ``touch superset.db``
 - ``superset db upgrade``
 - ``superset fab create-admin`` and follow instructions
-Add permissions: `superset fab create-permissions`
+- Add permissions: `superset fab create-permissions`
 
 
 so superset_config should look like, with your path and secret key:
@@ -37,7 +37,7 @@ SQLALCHEMY_DATABASE_URI = "sqlite:////YOUR PATH/superset.db"
 
 ### START: ``superset run -p 8088 --with-threads --reload --debugger``
 
-now you can log in at https://localhost:8088
+#### now you can log in at https://localhost:8088
 
 
 ### Setting up visualization of data:
@@ -50,8 +50,10 @@ now you can log in at https://localhost:8088
 
 ![DB](images/database_connect.PNG)
 
-creating dataset from the CSV File:
-Do this in terminal
+![DB2](images/database2.PNG)
+
+### Creating the dataset from the CSV File
+#### Do this in terminal:
 
 - ``sqlite3 /YOUR PATH/Project_2_CS350/usage/superset.db``
 

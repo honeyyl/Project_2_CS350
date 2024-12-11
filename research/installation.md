@@ -96,6 +96,21 @@ Before installation, ensure the following are installed on your system:
     ```bash
     superset db upgrade
     ```
+- Set a strong SECRET_KEY (required for security):
+    1. Generate a strong, random secret key:
+       ```bash
+       openssl rand -base64 42
+       ```
+    2. Open the `superset_config.py` file:
+       ```bash
+       nano ~/superset_config.py
+       ```
+    3. Add the following line with the generated key:
+       ```python
+       SECRET_KEY = 'your_generated_secret_key'
+       ```
+       Replace `'your_generated_secret_key'` with the key you generated.
+    
 - Create an admin user:
     ```bash
     export FLASK_APP=superset

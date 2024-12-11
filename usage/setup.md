@@ -80,7 +80,7 @@ Now creating a chart
 
 You should now have a dataset and a chart. 
 You can make more charts in the same manner.
-![CHART](images/chart.PNG)
+![CHART](/images/chart.PNG)
 
 Now you can make a dashboard:
 - go to the dashboard tab

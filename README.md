@@ -10,11 +10,11 @@
 --- 
 
 ## Project Overview
-Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in a SQLite environment and using it to visualize data. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the SQLite database.
+Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in a PostgreSQL environment, using it to visualize data, and exploring its main features and limitations. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the PostgreSQL database.
 
 ## Key Requirements
-- **System Installation**: Install Apache Superset in WSL, and install necessary dependencies.
-- **System Characteristics**: Apache Superset allows users to visualize complex data sets, create dashboards and view analytics. It supports SQL querying, real-time data access, and many popular databases including Postgres and SQLite.
+- **System Installation**: Install Apache Superset on WSL, ensuring compatibility with PostgreSQL.
+- **System Characteristics**: Apache Superset allows users to visualize complex data sets, creating intuitive dashboards and providing rich analytics. It supports SQL querying, real-time data access, and many popular databases.
 - **Usage**: Utilize Python for interacting with Apache Superset and visualizing data in VS Code. Example use cases include generating reports, creating charts, and exploring trends.
 - **Shortcomings**: Assess and document any current limitations or bugs in the system, such as integration difficulties with certain databases or performance concerns with large datasets.
 - **Future Plans**: Investigate the plans outlined by Apache Superset developers for future improvements, including new features and enhancements.
@@ -108,47 +108,10 @@ Apache Superset is an open-source business intelligence web application designed
      - **Metric**: `Sales`, aggregated by `SUM`.
    - Save and customize the chart.
 
-<<<<<<< HEAD
 5. **Building Dashboards**:
    - Go to the `Dashboard` tab.
    - Click `+ Dashboard`, drag existing charts, and arrange them as needed.
    - Save the dashboard.
-=======
-     Start Superset
-     ``` bash
-     superset run -p 8088 --with-threads --reload --debugger
-     ```
-
-2. **Connecting Apache Superset to SQLite**: (CHANGE TO SQLITE)
-
-     ``` bash
-     # Access Superset UI by going to localhost:8088
-     # Add a new database connection using the following details:
-          # Database: SQLite
-          # SQLAlchemy URI: sqlite:////PATH//file.db
-     ```
-
-3. **Using Apache Superset with Python**:
-
-     ``` bash
-     from superset import app, db
-     from superset.models.core import Database
-
-     # Example of querying a dataset
-     query = """
-     SELECT column1, column2
-     FROM table_name
-     WHERE condition = 'value'
-     """
-     result = db.session.execute(query)
-     ```
-
-4. **Generating Visualizations in Apache Superset:**
-   - Users can create pie charts, bar graphs, line charts, and more.
-   - To create a new visualization, select a dataset, define the chart type, and customize parameters.
-
-## System Shortcomings:
->>>>>>> 17d709d1ccec7f66a040b1d6fc66d268f4f693cc
 
 ## System Shortcomings
 - **Integration with Non-SQL Databases**: Currently, integration with NoSQL databases like MongoDB is not seamless and requires additional configuration.

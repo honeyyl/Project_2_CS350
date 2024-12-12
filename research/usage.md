@@ -7,7 +7,7 @@ Apache Superset is an open-source tool for data analysis and visualization. It e
 ## Main Purposes and Characteristics of the System
 
 ### Database Connectivity
-Superset connects to databases via **SQLAlchemy** and works seamlessly with most SQL-speaking databases.
+Superset connects to databases via **SQLAlchemy** and works seamlessly with most SQL-speaking databases. This is inclusive of MySQL, PostgreSQL, SQLite, and others.
 
 ### Data Visualization and Dashboards
 - Create diverse visualization types, such as charts, graphs, and geospatial representations.  

@@ -26,3 +26,47 @@ name = "Done"
   checkList = [ ]
   priority = ""
   linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "ifndt9sd0mdh7sekkymd1rxa"
+  title = "Dec. 2, 2024: Started working on documentation"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = "2024-12-02T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "sgt63xgs7md50h9zhp1dvjri"
+  title = "Dec. 4, 2024: Divided up respective parts of assignmnets"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "kewey8xld53wlg99r7ouwp8p"
+  title = "Dec. 9: Working on finalizing reseach"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "rwino01bqetvvtikxvn45y3u"
+  title = "Dec. 11: Finalizing project for submission"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]

@@ -1,0 +1,12 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+superset-venv/
+
+# Superset configuration
+superset_config.py

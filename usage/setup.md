@@ -72,6 +72,8 @@ SQLALCHEMY_DATABASE_URI = "sqlite:////YOUR PATH/superset.db"
 - make sure it exists: ``SELECT * FROM sales_data LIMIT 10;``
 - ``.exit``
 
+This is creating sample data to use as an example for some of the funtionality of Apache Superset.
+
 ### Now move back to the Superset UI:
 
 #### Adding the dataset:

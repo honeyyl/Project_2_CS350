@@ -10,7 +10,3 @@ superset-venv/
 
 # Superset configuration
 superset_config.py
-
-# SQLite database file
-*.db
-*.sqlite3

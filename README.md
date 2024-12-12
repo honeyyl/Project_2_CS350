@@ -2,134 +2,49 @@
 
 ## Apache Superset Database Visualization Tool
 
-### Contributors
-- Stephanie Myalik
-- Honey Love
-- Au Sein
+## Contributors
 
+- **Au Sein**
+- **Honey Love**
+- **Stephanie Myalik**
 --- 
 
 ## Project Overview
-Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in an SQLite environment, using it to visualize data, and exploring its main features and limitations. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the SQLite database.
+Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in an SQLite environment, using it to visualize data, and exploring its main features and limitations.
+
+---
 
 ## Key Requirements
-- **System Installation**: Install Apache Superset on WSL, ensuring compatibility with PostgreSQL.
-- **System Characteristics**: Apache Superset allows users to visualize complex data sets, creating intuitive dashboards and providing rich analytics. It supports SQL querying, real-time data access, and many popular databases.
-- **Usage**: Utilize Python for interacting with Apache Superset and visualizing data in VS Code. Example use cases include generating reports, creating charts, and exploring trends.
-- **Shortcomings**: Assess and document any current limitations or bugs in the system, such as integration difficulties with certain databases or performance concerns with large datasets.
-- **Future Plans**: Investigate the plans outlined by Apache Superset developers for future improvements, including new features and enhancements.
+- **System Instalation and Setup**: Installation of Apache Superset and configuration of a SQLite database. 
+- **Purposes and Characteristics of the System**: Understanding the main features and limitations of Apache Superset.
+- **Main usage of the System**: Creating datasets, visualizations, and dashboards in Apache Superset.
+- **Shortcomings and Future Plans for the System**
+
+---
 
 ## Project Timeline
 - **November 11, 2024**: Meet to plan procedure and created project repo. 
-- **December 2, 2024**: Divided up respective parts of project.
-- **December 4, 2024**: Began working on documentation. 
+- **December 2, 2024**: Divided up respective parts of project and began working on respective parts.
+- **December 4, 2024**: Working on setup and research.
 - **December 9, 2024**: Worked on finalizing research. 
 - **December 11, 2024**: Finalizing project for submission.
+---
+### Project Outline:
 
-## System Features and Usage
+- **Research:** 
+     - background.md: This file discusses the benefits and limitations of Apache Superset, as well as plans for the future.
+     - installation.md: This file details installation options
+     - usage.md: Tis file details the main purposes and characteristics of Apache Superset.
 
-### Key Setup Instructions
-1. **Setting up a Virtual Environment**:
-   ```bash
-   python3 -m venv superset-venv
-   source superset-venv/bin/activate
-   ```
+- **usage:**
+     - setup.md: This file provides instructions for setting up Apache Superset with SQLite. THis walks through connecting the database, creating a dataset, and visualizing data.
+     - sales_data.csv: This file contains sample data for use in Apache Superset.
+     superset.db: This file contains the SQLite database for use in Apache Superset. (may require o)
+---
 
-2. **Installing Dependencies**:
-   ```bash
-   pip install apache-superset flask
-   export FLASK_APP=superset
-   touch superset_config.py
-   export SUPERSET_CONFIG_PATH=$(pwd)/superset_config.py
-   ```
-
-3. **Configuring Superset**:
-   - Generate a secret key:
-     ```bash
-     openssl rand -base64 42
-     ```
-   - Update `superset_config.py`:
-     ```python
-     SECRET_KEY = "your-secret-key"
-     PREVENT_UNSAFE_DB_CONNECTIONS = False
-     SQLALCHEMY_DATABASE_URI = "sqlite:////YOUR PATH/superset.db"
-     ```
-
-4. **Initialize Superset**:
-   ```bash
-   touch superset.db
-   superset db upgrade
-   superset fab create-admin
-   superset fab create-permissions
-   ```
-
-5. **Start Superset**:
-   ```bash
-   superset run -p 8088 --with-threads --reload --debugger
-   ```
-
-6. **Access Superset**: Visit `https://localhost:8088` to log in.
-
-### Connecting and Visualizing Data
-1. **Adding the SQLite Database**:
-   - Navigate to `Settings` -> `Database Connections` -> `+ Database`.
-   - Select SQLite and provide the SQLAlchemy URI:
-     ```bash
-     sqlite:////YOUR PATH/superset.db
-     ```
-   - Confirm the connection appears in the database list.
-
-2. **Creating a Dataset from a CSV File**:
-   - Use SQLite CLI to create and populate a table:
-     ```bash
-     sqlite3 /YOUR PATH/Project_2_CS350/usage/superset.db
-     CREATE TABLE sales_data (
-         Date TEXT,
-         Region TEXT,
-         Product TEXT,
-         Sales INTEGER,
-         Profit INTEGER
-     );
-     .mode csv
-     .import /YOUR PATH/Project_2_CS350/usage/sales_data.csv sales_data
-     SELECT * FROM sales_data LIMIT 10;
-     .exit
-     ```
-
-3. **Adding and Using the Dataset**:
-   - Navigate to `+` -> `Data` -> `Create Dataset`.
-   - Select the database and table (`sales_data`).
-   - Click "Create Dataset and Create Chart".
-
-4. **Creating Visualizations**:
-   - Select the dataset.
-   - Create a pie chart:
-     - **Dimension**: `Region`
-     - **Metric**: `Sales`, aggregated by `SUM`.
-   - Save and customize the chart.
-
-5. **Building Dashboards**:
-   - Go to the `Dashboard` tab.
-   - Click `+ Dashboard`, drag existing charts, and arrange them as needed.
-   - Save the dashboard.
-
-## System Shortcomings
-- **Integration with Non-SQL Databases**: Currently, integration with NoSQL databases like MongoDB is not seamless and requires additional configuration.
-- **Performance Issues**: Some users report performance slowdowns when dealing with extremely large datasets or complex queries.
-- **Limited Customization**: While Apache Superset offers many visualization options, customization of chart styles and formats can be somewhat limited in certain cases.
-
-## Usage
-Scalability, fault tolerance, minimal latency, and compatibility with a range of data models and external tools are some of Superset's primary characteristics.
-- SQL databases may be accessed with ease thanks to database connectivity.
-- **Dashboards & Data Visualization**: Adaptable tools for making interactive dashboards and viewing data.
-- **Semantic Layer**: Personalized measurements and dimensions for improved analysis.
-- **SQL IDE**: A powerful SQL editor for preparation and data queries.
-- **Flexible Extensions**: Supports plugins and APIs and integrates with current infrastructure.
-- Scalable, cloud-native architecture features asynchronous caching and distributed task management.
-
-## Future Plans
-Apache Superset's development roadmap includes the following enhancements:
-- **Improved NoSQL Support**: Better native support for NoSQL databases like MongoDB and Apache Druid.
-- **Enhanced Data Caching**: Plans to implement more efficient caching techniques to speed up query performance.
-- **Advanced Data Exploration Features**: Adding new features like predictive analytics and machine learning integration.
-- **Better Customization Options**: Future versions will offer more extensive customization for visualizations, including advanced styling options for charts.
+### Referenced Documentation:
+- [Apache Superset Documentation](https://superset.apache.org/docs/)
+- [Pros and Cons of Apache Superset](https://dashboardfox.com/blog/pros-and-cons-of-apache-superset-straight-talk-review/)
+- [Creating Dashboards with Apache Superset](https://superset.apache.org/docs/using-superset/creating-your-first-dashboard/)
+- [Apache Superset Installation Guide](https://www.restack.io/docs/superset-knowledge-install-superset-guide)
+- [Apache Superset Roadmap](https://www.restack.io/docs/superset-knowledge-apache-superset-roadmap)

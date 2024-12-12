@@ -21,14 +21,6 @@ Apache Superset is an open-source business intelligence web application designed
 - **Shortcomings and Future Plans for the System**
 
 ---
-
-## Project Timeline
-- **November 11, 2024**: Meet to plan procedure and created project repo. 
-- **December 2, 2024**: Divided up respective parts of project and began working on respective parts.
-- **December 4, 2024**: Working on setup and research.
-- **December 9, 2024**: Worked on finalizing research. 
-- **December 11, 2024**: Finalizing project for submission.
----
 ### Project Outline:
 
 - **Research:** 
@@ -36,10 +28,18 @@ Apache Superset is an open-source business intelligence web application designed
      - installation.md: This file details installation options
      - usage.md: Tis file details the main purposes and characteristics of Apache Superset.
 
-- **usage:**
+- **Usage:**
      - setup.md: This file provides instructions for setting up Apache Superset with SQLite. THis walks through connecting the database, creating a dataset, and visualizing data.
      - sales_data.csv: This file contains sample data for use in Apache Superset.
      superset.db: This file contains the SQLite database for use in Apache Superset. (may require o)
+---
+
+## Project Timeline
+- **November 11, 2024**: Meet to plan procedure and created project repo. 
+- **December 2, 2024**: Divided up respective parts of project and began working on respective parts.
+- **December 4, 2024**: Working on setup and research.
+- **December 9, 2024**: Worked on finalizing research. 
+- **December 11, 2024**: Finalizing project for submission.
 ---
 
 ### Referenced Documentation:

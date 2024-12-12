@@ -21,9 +21,6 @@ Before installation, ensure the following are installed on your system:
 4. **Pip**  
    - Ensure pip (the Python package manager) is installed.
 
-5. **Visual Studio Code (optional)**  
-   - A code editor such as VS Code is recommended for future development.
-
 ---
 
 ## Installation Steps

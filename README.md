@@ -10,7 +10,7 @@
 --- 
 
 ## Project Overview
-Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in a PostgreSQL environment, using it to visualize data, and exploring its main features and limitations. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the PostgreSQL database.
+Apache Superset is an open-source business intelligence web application designed to create and share interactive data visualizations and dashboards. This project involves setting up Apache Superset in an SQLite environment, using it to visualize data, and exploring its main features and limitations. The system will be installed on Windows Subsystem for Linux (WSL) for easier integration with the SQLite database.
 
 ## Key Requirements
 - **System Installation**: Install Apache Superset on WSL, ensuring compatibility with PostgreSQL.
